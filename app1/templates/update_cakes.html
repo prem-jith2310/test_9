@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add cakes</title>
+  </head>
+  <body>
+    <form
+      method="post"
+      enctype="multipart/form-data"
+      action="/update_cakes2/{{x.id}}"
+    >
+      {% csrf_token %}
+      <label for="name">Cake Name</label>
+      <input type="text" name="name" value="{{x.name}}" /><br />
+      <label for="qty">Quantity</label>
+      <input type="number" name="qty" value="{{x.qty}}" /><br />
+      <label for="flavr">Flavour</label>
+      <input type="text" name="flavour" value="{{x.flavour}}" /><br />
+      <label for="price">Price</label>
+      <input type="number" name="price" value="{{x.price}}" /><br />
+      <label for="photo">Photo</label>
+      <img src="{{x.photo}}" alt="" />
+      <input type="file" name="photo" value="{{x.photo}}" /><br />
+      <input type="submit" value="ADD" />
+    </form>
+  </body>
+</html>

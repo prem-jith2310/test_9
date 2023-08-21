@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add cakes</title>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data" action="/add_cakes/">
+      {% csrf_token %}
+      <label for="name">Cake Name</label>
+      <input type="text" name="name" /><br />
+      <label for="qty">Quantity</label>
+      <input type="number" name="qty" /><br />
+      <label for="flavr">Flavour</label>
+      <input type="text" name="flavour" /><br />
+      <label for="price">Price</label>
+      <input type="number" name="price" /><br />
+      <label for="photo">Photo</label>
+      <input type="file" name="photo" /><br />
+      <input type="submit" value="ADD" />
+    </form>
+  </body>
+</html>
